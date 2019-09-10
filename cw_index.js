@@ -1,22 +1,25 @@
 // 1) Print the first p tag to the console using the ID, class, and tag selectors.
 
 //
-// let ptag =document.getElementsByTagName("p");
-// console.log(ptag[0]);
+let ptag =document.getElementsByTagName("p");
+console.log(ptag[0]);
 
 let ptag02 = document.getElementById('first');
 console.log(ptag02);
 
 let ptag3 = document.getElementsByClassName('special');
 console.log(ptag3);
+// !! : getElementsByClassName gets an array of elements 
 
 // 2) Print the special class using both the query selector and query all selector.
 
 let qsa = document.querySelector('.special');
-console.log(qsa[0].innerHTML);
+// !! : query selector does not return an array
+// console.log(qsa[0].innerHTML);
 
 
 let qsa2 = document.querySelectorAll('special');
+// !! : '.special'
 console.log(qsa2[0].innerText);
 
 
@@ -30,6 +33,7 @@ for (let x =0; x<h1el.length; x++)
 }
 // 4) Change the color of the last p tag to yellow.
 let ptag2 = document.getElementById('#last');
+// !! 'last'
 ptag2.style.color = 'yellow';
 
 // for (let pt =0; pt<h1el.length; pt++)
